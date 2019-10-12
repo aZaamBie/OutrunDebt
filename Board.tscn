@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/outruncity.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array(  ),
+"tilts": PoolRealArray(  )
+}
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.368119
+height = 0.674123
+
+[sub_resource type="SphereShape" id=3]
+radius = 0.342484
+
+[node name="Board" type="Spatial"]
+
+[node name="Path" type="Path" parent="."]
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayerFollow" type="PathFollow" parent="Path"]
+transform = Transform( 0.186076, 0, 0.982478, 0, 1, 0, -0.982499, 0, 0.186072, -2.75577, 0, -2.65031 )
+offset = 18.29
+rotation_mode = 0
+
+[node name="Player" type="KinematicBody" parent="Path/PlayerFollow"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Path/PlayerFollow/Player"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Path/PlayerFollow/Player"]
+radius = 0.4
+height = 1.308
+
+[node name="Camera" type="Camera" parent="Path/PlayerFollow/Player"]
+transform = Transform( 0.019921, 0.452945, -0.891357, 0.000783213, 0.891493, 0.453031, 0.999858, -0.00972319, 0.0174051, -4.80456, 3.26966, -0.199098 )
+
+[node name="BoardPlaceFollow" type="PathFollow" parent="Path"]
+
+[node name="Place" type="Area" parent="Path/BoardPlaceFollow"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Path/BoardPlaceFollow/Place"]
+shape = SubResource( 3 )
+
+[node name="CSGSphere" type="CSGSphere" parent="Path/BoardPlaceFollow/Place"]
+radius = 0.349985
+
+[node name="outruncity" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85112, -1.93875, 3.24638 )
+mesh = ExtResource( 2 )
+material/0 = null
+[connection signal="input_event" from="Path/BoardPlaceFollow/Place" to="Path/PlayerFollow/Player" method="_on_Place_input_event"]

@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/outruncity.obj-6c5fbb50c2ba95dc3afa467bac25ed25.mesh"
+
+[deps]
+
+files=[ "res://.import/outruncity.obj-6c5fbb50c2ba95dc3afa467bac25ed25.mesh" ]
+
+source_file="res://assets/outruncity.obj"
+dest_files=[ "res://.import/outruncity.obj-6c5fbb50c2ba95dc3afa467bac25ed25.mesh", "res://.import/outruncity.obj-6c5fbb50c2ba95dc3afa467bac25ed25.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
