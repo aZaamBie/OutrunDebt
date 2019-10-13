@@ -19,6 +19,10 @@ config/name="OutrunDebt"
 run/main_scene="res://Board.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BoardPlaces="*res://BoardPlaces.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
