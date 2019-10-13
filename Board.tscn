@@ -42,14 +42,14 @@ script = ExtResource( 3 )
 
 [node name="Area" type="Area" parent="City/Path/Player"]
 editor/display_folded = true
-transform = Transform( 1, 0, -1.49012e-08, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, -1.49012e-008, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="City/Path/Player/Area"]
-transform = Transform( 0.999999, 1.19209e-07, 4.44089e-15, 0, -4.37114e-08, 1, 1.04308e-07, -0.999999, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 0.999999, 1.19209e-007, 4.44089e-015, 0, -4.37114e-008, 1, 1.04308e-007, -0.999999, -4.37114e-008, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="City/Path/Player"]
-transform = Transform( 0.999999, 0, -1.63913e-07, 0, 1, 0, 8.9407e-08, 0, 0.999999, 0, 0, 0 )
+transform = Transform( 0.999999, 0, -1.63913e-007, 0, 1, 0, 8.9407e-008, 0, 0.999999, 0, 0, 0 )
 radius = 0.4
 height = 1.308
 
