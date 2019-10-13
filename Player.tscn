@@ -3,7 +3,7 @@
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://PlayerFinances.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleShape" id=1]
 radius = 0.368119
 height = 0.674123
 
@@ -18,7 +18,7 @@ transform = Transform( 1, 0, -1.49012e-08, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 0.999999, 1.19209e-07, 4.44089e-15, 0, -4.37114e-08, 1, 1.04308e-07, -0.999999, -4.37114e-08, 0, 0, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 transform = Transform( 0.999999, 0, -1.63913e-07, 0, 1, 0, 8.9407e-08, 0, 0.999999, 0, 0, 0 )
